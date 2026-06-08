@@ -22,3 +22,12 @@ Get API keys from: https://demo.binance.com/en/my/settings/api-management
 ## How to Run
 
 ### MARKET order
+python cli.py market --symbol BTCUSDT --side BUY --quantity 0.001
+### LIMIT order
+python cli.py limit --symbol BTCUSDT --side BUY --quantity 0.001 --price 60000
+### STOP_MARKET order (bonus)
+python cli.py stop --symbol BTCUSDT --side SELL --quantity 0.001 --stop-price 50000
+### Get help
+python cli.py --help
+python cli.py market --help
+
