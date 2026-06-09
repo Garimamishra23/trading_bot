@@ -55,28 +55,36 @@ r = place_stop_market_order(client, 'BTCUSDT', 'SELL', '0.001', '50000')
 
 ## 📊 Sample Output
 
+```
 ==================================================
-ORDER REQUEST SUMMARY
-Symbol     : BTCUSDT
-Side       : BUY
-Type       : MARKET
-Quantity   : 0.001
+  ORDER REQUEST SUMMARY
 ==================================================
-ORDER CONFIRMATION
-Order ID     : 14487962026
-Symbol       : BTCUSDT
-Side         : BUY
-Type         : MARKET
-Status       : NEW
-Quantity     : 0.0010
-Executed Qty : 0.0000
-Order placed successfully!
+  Symbol     : BTCUSDT
+  Side       : BUY
+  Type       : MARKET
+  Quantity   : 0.001
+==================================================
+
+==================================================
+  ORDER CONFIRMATION
+==================================================
+  Order ID     : 14487962026
+  Symbol       : BTCUSDT
+  Side         : BUY
+  Type         : MARKET
+  Status       : NEW
+  Quantity     : 0.0010
+  Executed Qty : 0.0000
+==================================================
+  Order placed successfully!
+```
 
 ## 📁 Project Structure
 
+```
 trading_bot/
 ├── bot/
-│   ├── init.py
+│   ├── __init__.py
 │   ├── client.py          # Binance API wrapper (auth, signing, HTTP)
 │   ├── orders.py          # Order placement logic
 │   ├── validators.py      # Input validation
@@ -86,6 +94,7 @@ trading_bot/
 ├── config.py              # API keys (excluded from git)
 ├── requirements.txt
 └── README.md
+```
 
 ## 🛠️ Setup
 
