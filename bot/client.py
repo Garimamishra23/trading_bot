@@ -74,5 +74,15 @@ class BinanceFuturesClient:
         return self._request("POST", "/fapi/v1/algoOrder", params=params)
     def place_order(self, **params):
         return self._request("POST", "/fapi/v1/order", params=params)
+    def get_ticker(self, symbol):
+        url = self.base_url + "/fapi/v1/ticker/24hr"
+        response = self.session.get(url, params={"symbol": symbol}, timeout=(5, 10))
+        return response.json()
+
+    def get_balance(self):
+        return self._request("GET", "/fapi/v2/balance")
+
+    def get_positions(self):
+        return self._request("GET", "/fapi/v2/positionRisk")
 
 
